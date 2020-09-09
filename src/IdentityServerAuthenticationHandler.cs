@@ -86,8 +86,7 @@ namespace IdentityServer4.AccessTokenValidation
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, ex.Message);
-                return AuthenticateResult.Fail(ex);
+                throw ex;
             }
             finally
             {
