@@ -46,8 +46,6 @@ namespace IdentityServer4.AccessTokenValidation
             {
                 if (token != null)
                 {
-                    _logger.LogTrace("Token found: {token}", token);
-
                     removeToken = true;
                     Context.Items.Add(IdentityServerAuthenticationDefaults.TokenItemsKey, token);
 
